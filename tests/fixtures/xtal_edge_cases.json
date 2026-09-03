@@ -1,0 +1,48 @@
+{
+  "_note": "Hand-authored rows for shapes the recorded flag-and-anthem fixture does not carry: a price given as an array of variant prices, a family with option-bearing variants, HTML in a description, an image only inside images[], a row with no price. Field names follow the XTAL contract in AGENT-PROMPT.md.",
+  "results": [
+    {
+      "id": 990001,
+      "title": "Ridge Merino Crew",
+      "vendor": "ACME Wool",
+      "product_type": "Sweaters",
+      "category": "Knitwear",
+      "description": "<p>Midweight merino crew.&nbsp;Soft hand, <b>no itch</b>.</p>",
+      "enhanced_description": "A midweight merino crew neck for shoulder-season layering.",
+      "ui_tags": ["material_merino-wool", "color_navy", "color_oat", "fit_regular", "brand_acme"],
+      "product_attributes": {"weight": "midweight", "care": ["hand wash", "lay flat"]},
+      "numeric_product_attributes": {"price": 59.0, "gsm": 260},
+      "price": [79.0, 59.0, 69.0],
+      "currency": "usd",
+      "images": [{"src": "https://cdn.example.test/ridge-crew.jpg"}],
+      "on_sale": true,
+      "discount_pct": 20,
+      "price_tier": "premium",
+      "available": true,
+      "options": [{"name": "Size", "values": ["S", "M", "L"]}, {"name": "Color", "values": ["Navy", "Oat"]}],
+      "variants": [
+        {"id": "1", "title": "S / Navy", "sku": "RMC-S-NVY", "price": 79.0, "compare_at_price": 99.0, "available": true},
+        {"id": "2", "title": "M / Navy", "sku": "RMC-M-NVY", "price": 59.0, "compare_at_price": 99.0, "available": false},
+        {"id": "3", "title": "L / Oat", "sku": "RMC-L-OAT", "price": 69.0, "compare_at_price": 99.0, "available": true, "image": {"src": "https://cdn.example.test/ridge-crew-oat.jpg"}}
+      ]
+    },
+    {
+      "id": "990002",
+      "name": "Nameless Beanie",
+      "vendor": "ACME Wool",
+      "ui_tags": ["color_black"],
+      "available": false,
+      "images": ["https://cdn.example.test/beanie.jpg"],
+      "variants": [{"id": "9", "title": "Default Title", "sku": "BEANIE-BLK", "price": "18.50"}]
+    },
+    {
+      "id": "990003",
+      "title": "Row Without A Price",
+      "vendor": "ACME Wool"
+    }
+  ],
+  "total": 3,
+  "query_time": 0.42,
+  "search_context": {"augmented_query": "merino crew", "product_keyword": "crew"},
+  "relevance_scores": {"990001": 1, "990002": 0.4, "990003": 0.1}
+}
