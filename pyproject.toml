@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xtal-commerce-backend"
+version = "0.1.0"
+description = "Anthropic's commerce-agents StorefrontBackend over the XTAL Search HTTP API."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Prompt Engineering Inc." }]
+# Upstream is installed from the pinned commit in .upstream-pin.txt, never from a branch.
+# shopping-agent-core pins commerce-common to a version no index carries, so both come
+# from the same commit.
+dependencies = [
+  "httpx>=0.27",
+  "pydantic>=2.7",
+  "commerce-common @ git+https://github.com/anthropics/commerce-agents@fd4d59224ab96b43c6dc6888207c67b3bd5a24cf#subdirectory=commerce-common",
+  "shopping-agent-core @ git+https://github.com/anthropics/commerce-agents@fd4d59224ab96b43c6dc6888207c67b3bd5a24cf#subdirectory=shopping-agent/core",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.15,<0.17"]
+
+[tool.hatch.metadata]
+# The two upstream packages are git direct references (see dependencies).
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["xtal_commerce_backend"]

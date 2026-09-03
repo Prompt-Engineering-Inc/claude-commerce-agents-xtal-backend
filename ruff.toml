@@ -1,0 +1,9 @@
+# The same policy as the upstream repo's ruff.toml, so the contract tests lint the same way.
+line-length = 100
+target-version = "py311"
+exclude = ["*.md", "vendor", ".venv", "node_modules"]
+src = ["xtal_commerce_backend", "examples", "scripts", "tests"]
+
+[lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "W291", "W293"]
+ignore = ["E501"]
