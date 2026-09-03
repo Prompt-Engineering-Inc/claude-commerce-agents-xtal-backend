@@ -11,3 +11,7 @@ build/
 .ruff_cache/
 node_modules/
 vendor/commerce-agents/
+
+# demo runs
+examples/retail_on_xtal/data/.memory-*.json
+docs/demo/logs/

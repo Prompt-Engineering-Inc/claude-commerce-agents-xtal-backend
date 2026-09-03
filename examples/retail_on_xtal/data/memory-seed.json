@@ -1,0 +1,6 @@
+{
+  "demo-user": [
+    {"key": "layering_habit", "value": "runs cold and layers a flannel over a tee most of fall", "category": "context", "updated_at": "2026-08-20T15:00:00Z"},
+    {"key": "fabric_constraint", "value": "skips anything scratchy; wants stretch in a shirt", "category": "constraint", "updated_at": "2026-08-27T18:30:00Z"}
+  ]
+}

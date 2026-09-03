@@ -1,0 +1,8 @@
+{
+  "name": "claude-commerce-agents-xtal-backend",
+  "private": true,
+  "description": "Playwright, for scripts/demo_drive.js. The package itself is Python.",
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

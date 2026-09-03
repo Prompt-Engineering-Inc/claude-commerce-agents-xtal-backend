@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "user_id": "demo-user",
+      "display_name": "Jordan",
+      "loyalty_tier": "Member",
+      "default_location": "Asheville",
+      "preferences": {
+        "fit": "prefers a relaxed, untucked fit",
+        "style": "casual weekend layers, muted colors"
+      }
+    },
+    {
+      "user_id": "demo-user-2",
+      "display_name": "Riley",
+      "loyalty_tier": "Guest",
+      "default_location": "Boise",
+      "preferences": {
+        "budget": "value-focused"
+      }
+    }
+  ]
+}
