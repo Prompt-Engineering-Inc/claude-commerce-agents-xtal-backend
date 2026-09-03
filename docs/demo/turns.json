@@ -1,0 +1,214 @@
+{
+  "base_url": "http://localhost:3000",
+  "recorded_at": "2026-09-03T20:22:41.040Z",
+  "turns": [
+    {
+      "message": "I need a warm shirt for a fall bonfire, under $80",
+      "sent_at": 1788466928419,
+      "first_byte_ms": 3850,
+      "first_text_ms": 9257,
+      "first_ui_ms": 12854,
+      "done_ms": 15070,
+      "first_event": {
+        "tool_call": 3850,
+        "tool_result": 3864,
+        "text_delta": 9257,
+        "ui_partial": 11489,
+        "ui": 12854,
+        "turn_complete": 15070
+      },
+      "tool_calls": [
+        {
+          "at_ms": 3850,
+          "tool": "load_skill",
+          "input": {
+            "skill_name": "search-discovery"
+          }
+        },
+        {
+          "at_ms": 6200,
+          "tool": "search_products",
+          "input": {
+            "query": "flannel shirt stretch fabric relaxed fit",
+            "filters": {
+              "category": "shirts",
+              "max_price": 80,
+              "attributes": {
+                "fit": "relaxed"
+              }
+            }
+          }
+        },
+        {
+          "at_ms": 12835,
+          "tool": "present_products",
+          "input": {
+            "title": "Warm flannel shirts for a fall bonfire",
+            "picks": [
+              {
+                "product_id": "7793851662415",
+                "reason": "charcoal, stretch knit fabric that avoids the scratchy feel you skip"
+              },
+              {
+                "product_id": "7544559730767",
+                "reason": "navy plaid, muted tone that layers well over a tee"
+              },
+              {
+                "product_id": "7544558780495",
+                "reason": "light grey, untucked relaxed fit"
+              }
+            ],
+            "layout": "carousel"
+          }
+        },
+        {
+          "at_ms": 15065,
+          "tool": "present_suggestions",
+          "input": {
+            "suggestions": [
+              "Show me sizes for charcoal",
+              "Compare these three",
+              "Find a tee to layer underneath",
+              "See other muted colors"
+            ]
+          }
+        }
+      ],
+      "ui": [
+        {
+          "at_ms": 12854,
+          "component": "products"
+        },
+        {
+          "at_ms": 15070,
+          "component": "suggestions"
+        }
+      ]
+    },
+    {
+      "message": "Compare the top two",
+      "sent_at": 1788466944888,
+      "first_byte_ms": 1935,
+      "first_text_ms": 5750,
+      "first_ui_ms": 9303,
+      "done_ms": 11060,
+      "first_event": {
+        "tool_call": 1935,
+        "tool_result": 4361,
+        "text_delta": 5750,
+        "ui_partial": 6896,
+        "ui": 9303,
+        "turn_complete": 11060
+      },
+      "tool_calls": [
+        {
+          "at_ms": 1935,
+          "tool": "get_product_details",
+          "input": {
+            "product_id": "7793851662415"
+          }
+        },
+        {
+          "at_ms": 2362,
+          "tool": "get_product_details",
+          "input": {
+            "product_id": "7544559730767"
+          }
+        },
+        {
+          "at_ms": 9248,
+          "tool": "present_comparison",
+          "input": {
+            "title": "Charcoal vs. navy plaid flannel",
+            "dimensions": [
+              "color/pattern",
+              "pockets",
+              "fit"
+            ],
+            "entries": [
+              {
+                "product_id": "7793851662415",
+                "pros": [
+                  "solid charcoal, easiest to mix into muted layers",
+                  "dual front chest pockets",
+                  "untucked fit built in"
+                ],
+                "cons": [
+                  "less visual interest than a plaid"
+                ],
+                "best_for": "a low-key, monochrome layered look"
+              },
+              {
+                "product_id": "7544559730767",
+                "pros": [
+                  "navy-blue-white plaid adds classic bonfire-night texture",
+                  "same soft stretch-knit fabric"
+                ],
+                "cons": [
+                  "single chest pocket instead of two",
+                  "plaid pattern is bolder than a solid"
+                ],
+                "best_for": "someone who wants a traditional plaid flannel look"
+              }
+            ],
+            "recommended_product_id": "7793851662415"
+          }
+        },
+        {
+          "at_ms": 10996,
+          "tool": "present_suggestions",
+          "input": {
+            "suggestions": [
+              "Get sizes for charcoal",
+              "Get sizes for navy plaid",
+              "Find a tee to layer underneath"
+            ]
+          }
+        }
+      ],
+      "ui": [
+        {
+          "at_ms": 9303,
+          "component": "comparison"
+        },
+        {
+          "at_ms": 11054,
+          "component": "suggestions"
+        }
+      ]
+    },
+    {
+      "message": "Which one has stretch?",
+      "sent_at": 1788466957300,
+      "first_byte_ms": 1095,
+      "first_text_ms": 1095,
+      "first_ui_ms": 2451,
+      "done_ms": 2457,
+      "first_event": {
+        "text_delta": 1095,
+        "tool_call": 2439,
+        "ui": 2451,
+        "tool_result": 2457,
+        "turn_complete": 2457
+      },
+      "tool_calls": [
+        {
+          "at_ms": 2439,
+          "tool": "present_suggestions",
+          "input": {
+            "suggestions": [
+              "Get sizes for charcoal",
+              "Get sizes for navy plaid"
+            ]
+          }
+        }
+      ],
+      "ui": [
+        {
+          "at_ms": 2451,
+          "component": "suggestions"
+        }
+      ]
+    }
+  ]
+}
